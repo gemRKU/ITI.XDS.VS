@@ -199,6 +199,7 @@ menu:
     Qualifikationen nichtärztlicher Autoren: CodeSystem-QualifikationenNichtaerztlicherAutoren.html
     Qualifikatoren Zahnärztekammer: CodeSystem-QualifikatorenZahnAerztekammer.html
     Vertraulichkeiten: CodeSystem-Vertraulichkeiten.html
+    Workflow Events: CodeSystem-WorkflowEvents.html
   Eigene Value Sets:
     Berufe, ärztlich: ValueSet-BerufeAerztlich.html
     Dokumenten-Warnhinweise: ValueSet-DokumentenWarnhinweise.html
@@ -219,6 +220,7 @@ menu:
     Qualifikationen nichtärztlicher Autoren: ValueSet-QualifikationenNichtaerztlicherAutoren.html
     Qualifikatoren Zahnärztekammer: ValueSet-QualifikatorenZahnAerztekammer.html
     Vertraulichkeiten: ValueSet-Vertraulichkeiten.html
+    Workflow Events: ValueSet-WorkflowEvents.html
   Naming Systems:
     Dokumenten-Warnhinweise: NamingSystem-DokumentenWarnhinweise.html
     Dokumentenklassen: NamingSystem-Dokumentenklassen.html

@@ -203,9 +203,10 @@ Description: "**IHE XDS event Code List**"
 * ^compose.include[+].system = "urn:iso-astm:E1762-95:2013"
 
 
-* ^compose.include[+].system = "http://ihe-d.de/CodeSystems/DeutscheDokumentenformate"
-* ^compose.include[=].concept[+].code = #urn:ihe:iti:xdw:2011:eventCode:open
-* ^compose.include[=].concept[+].code = #urn:ihe:iti:xdw:2011:eventCode:closed
+//* ^compose.include[+].system = "http://ihe-d.de/CodeSystems/DeutscheDokumentenformate"
+//* ^compose.include[=].concept[+].code = #urn:ihe:iti:xdw:2011:eventCode:open
+//* ^compose.include[=].concept[+].code = #urn:ihe:iti:xdw:2011:eventCode:closed
+* ^compose.include[+].system = "http://www.ihe-d.de/fhir/CodeSystem/WorkflowEvents"
 
 //funktioniert alleine
 * ^compose.include[+].system = "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP"

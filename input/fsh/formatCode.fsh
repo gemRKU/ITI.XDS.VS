@@ -128,8 +128,8 @@ Description: "Dokumenten **Formate**"
 
 * #urn:hl7-de:DGUV-StatEntlassbrief:2020 "DGUV Stationärer Entlassbrief"
 
-* #urn:ihe:iti:xdw:2011:eventCode:open "Workflow offen"
-* #urn:ihe:iti:xdw:2011:eventCode:closed "Workflow geschlossen" 
+//* #urn:ihe:iti:xdw:2011:eventCode:open "Workflow offen"
+//* #urn:ihe:iti:xdw:2011:eventCode:closed "Workflow geschlossen" 
 
 * #urn:ihe-d:ig:arztbrief:2014:nonXmlBody "Arztbrief 2014"
 * #urn:ihe-d:ig:Arztbriefplus:2017 "Arztbrief plus"
@@ -174,6 +174,46 @@ Description: "Dokumenten **Formate**"
 * insert HeaderDetailRules
 
 * include codes from system http://ihe-d.de/CodeSystems/DeutscheDokumentenformate
+
+
+
+
+CodeSystem: WorkflowEventsCS
+Id: WorkflowEvents
+Title: "Workflow Events"
+Description: "**Workflow Events**"
+
+* ^url = "http://www.ihe-d.de/fhir/CodeSystem/WorkflowEvents"
+* ^version = "4.0.0"
+
+* insert HeaderDetailRules
+
+* ^language = #de-DE
+* ^caseSensitive = true
+* ^valueSet = "http://www.ihe-d.de/fhir/ValueSet/WorkflowEvents"
+* ^hierarchyMeaning = #is-a
+* ^compositional = false
+* ^versionNeeded = false
+* ^content = #complete
+
+
+* #urn:ihe:iti:xdw:2011:eventCode:open "Workflow offen"
+* #urn:ihe:iti:xdw:2011:eventCode:closed "Workflow geschlossen" 
+
+
+
+ValueSet: WorkflowEventsVS
+Id: WorkflowEvents
+Title: "Workflow Events"
+Description: "**Workflow Events**"
+
+* ^url = "http://www.ihe-d.de/fhir/ValueSet/WorkflowEvents"
+* ^version = "4.0.0"
+
+* insert HeaderDetailRules
+
+* include codes from system http://www.ihe-d.de/fhir/CodeSystem/WorkflowEvents
+
 
 
 
@@ -249,6 +289,23 @@ Usage: #definition
 * uniqueId[=].value = "http://ihe-d.de/CodeSystems/DeutscheDokumentenformate"
 * uniqueId[=].preferred = true
 * uniqueId[=].comment = "alte Canonical, die nicht auflöst"
+
+
+
+Instance: WorkflowEvents
+InstanceOf: NamingSystem
+Usage: #definition
+
+* insert HeaderNamingSystemRules
+
+* name = "WorkflowEvents"
+* description = "**Workflow Events**"
+
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://www.ihe-d.de/fhir/CodeSystem/WorkflowEvents"
+* uniqueId[=].preferred = false
+* uniqueId[=].comment = "neue Canonical, die auflöst"
+
 
 
 
